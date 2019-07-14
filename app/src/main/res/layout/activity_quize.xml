@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+        <TabHost
+            android:id="@+id/tabhost1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+                        </TabWidget>
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/tabPop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <EditText
+                                        android:id="@+id/text1"
+                                        android:hint="정답"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="52dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"/>
+                                    <Button
+                                        android:id="@+id/quizeactivity_button_answer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="60dp"
+                                        android:layout_marginLeft="50dp"
+                                        android:layout_marginRight="50dp"
+                                        android:layout_marginTop="100dp"
+                                        android:text="정답제출"/>
+                                </LinearLayout>
+                        </FrameLayout>
+                </LinearLayout>
+        </TabHost>
+</LinearLayout>

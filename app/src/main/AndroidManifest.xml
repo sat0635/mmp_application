@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.study.gst.mmpapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".NearInfo.NearStoreActivity"></activity>
+        <activity android:name=".PersonInfo.CouponActivity" />
+        <activity
+            android:name=".Missions.MissionClearActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".Missions.FindImageActivity" />
+        <activity android:name=".Missions.FindQRcodeActivity" />
+        <activity
+            android:name=".Missions.QuizeActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".Missions.PhotoMissionActivity" />
+        <activity android:name=".Missions.TypingMissionActivity" />
+        <activity android:name=".Missions.MissionMainActivity" />
+        <activity android:name=".QRcodeActivity" />
+        <activity android:name=".NearInfo.NearPlaceActivity" />
+        <activity android:name=".Missions.WallMissionActivity" />
+        <activity
+            android:name=".Intro.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Intro.MainActivity" />
+        <activity android:name=".PersonInfo.MyPage" />
+        <activity android:name=".PersonInfo.MissionPlace" />
+        <activity android:name=".PersonInfo.Ranking" />
+        <activity
+            android:name=".PersonInfo.MissionPlacePopup"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity android:name=".Intro.SignupActivity" />
+        <activity android:name=".Intro.LoginActivity" />
+    </application>
+
+</manifest>
