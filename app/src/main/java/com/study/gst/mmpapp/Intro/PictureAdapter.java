@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.model.Picture;
 
 import java.util.ArrayList;
 

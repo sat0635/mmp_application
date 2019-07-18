@@ -1,6 +1,7 @@
 package com.study.gst.mmpapp.PersonInfo;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,7 +13,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
+import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.model.Tour;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 
@@ -27,6 +33,7 @@ public class CouponActivity extends AppCompatActivity {
 
 
         listView = (ListView) this.findViewById(R.id.coupon_list);
+        new JSONTask().execute("http://106.10.35.40:8000/api");
 
 
         ArrayList<String> items = new ArrayList<>();
@@ -40,6 +47,34 @@ public class CouponActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
     }
 
+    public class JSONTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+            return HTTPCommunication.getHTTP(urls[0]);
+        }
+
+        //doInBackground메소드가 끝나면 여기로 와서 텍스트뷰의 값을 바꿔준다.
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Log.i("result", result);
+            ArrayList<Tour> tourList = new ArrayList<Tour>();
+            try {
+                JSONArray tourListJson = new JSONArray(result);
+
+                for(int i = 0; i < tourListJson.length(); i++) {
+                    Log.d("tag","lopal"+tourListJson.getJSONObject(i));
+                }
+
+            } catch (JSONException je) {
+                je.printStackTrace();
+            }
+
+
+
+        }
+
+    }
 
     private class CustomAdapter extends ArrayAdapter<String> {
         private ArrayList<String> items;

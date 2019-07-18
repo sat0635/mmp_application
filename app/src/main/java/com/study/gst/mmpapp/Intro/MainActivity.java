@@ -1,11 +1,14 @@
 package com.study.gst.mmpapp.Intro;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.view.MenuItem;
@@ -16,7 +19,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.NearInfo.NearStoreActivity;
 import com.study.gst.mmpapp.NearInfo.NearStoreAdapter;
 import com.study.gst.mmpapp.PersonInfo.MissionPlace;
@@ -25,6 +30,13 @@ import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
 import com.study.gst.mmpapp.QRcodeActivity;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
+import com.study.gst.mmpapp.HTTP.HTTPCommunication;
+import com.study.gst.mmpapp.model.Tour;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +44,7 @@ public class MainActivity extends AppCompatActivity
     private PictureAdapter adapter = new PictureAdapter();
     private Button mission_button;
     private Button place_button;
+    private TextView tv_outPut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +54,6 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-
 
 
         mission_button = (Button)findViewById(R.id.mission_button);

@@ -1,5 +1,7 @@
 package com.study.gst.mmpapp.HTTP;
 
+import android.util.Log;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -41,6 +43,7 @@ public class HTTPCommunication {
                 }
 
                 //다 가져오면 String 형변환을 수행한다. 이유는 protected String doInBackground(String... urls) 니까
+                Log.d("tag","lopal http:"+buffer.toString());
                 return buffer.toString();
 
                 //아래는 예외처리 부분이다.

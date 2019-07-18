@@ -30,12 +30,11 @@ public class MissionPlacePopup  extends ActivityGroup {
         tabHost.setup(getLocalActivityManager());
         TabHost.TabSpec tab1 = tabHost.newTabSpec("A").setContent(R.id.tabPop).setIndicator("미션목록");
         textView = (TextView) findViewById(R.id.tabText1);
-        textView.setText(tour.getTourInfo());
         tabHost.addTab(tab1);
 
         TabHost.TabSpec tab2 = tabHost.newTabSpec("B").setContent(R.id.tabPop2).setIndicator("장소정보");
         textView = (TextView) findViewById(R.id.tabText2);
-        textView.setText(tour.getAddress());
+
         tabHost.addTab(tab2);
 
 

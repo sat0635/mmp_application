@@ -11,12 +11,13 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.model.Tour;
 
 import java.util.ArrayList;
 
 public class NearPlaceAdapter extends RecyclerView.Adapter<NearPlaceAdapter.ViewHolder> {
 
-    private ArrayList<NearPlaceImage> items = new ArrayList<>();
+    private ArrayList<Tour> items = new ArrayList<>();
 
     @NonNull
     @Override
@@ -31,15 +32,9 @@ public class NearPlaceAdapter extends RecyclerView.Adapter<NearPlaceAdapter.View
     @Override
     public void onBindViewHolder(@NonNull NearPlaceAdapter.ViewHolder viewHolder, int position) {
 
-        NearPlaceImage item = items.get(position);
+        Tour item = items.get(position);
 
-        Glide.with(viewHolder.itemView.getContext())
-                .load(item.getUrl())
-                .apply(new RequestOptions().circleCrop())
-                .into(viewHolder.ivImage);
-        viewHolder.tvBigPlaceName.setText(item.getBig_place());
-        viewHolder.tvPlaceName.setText(item.getPlace());
-        viewHolder.tvPlaceKm.setText(item.getKm());
+
 
     }
 
@@ -48,7 +43,7 @@ public class NearPlaceAdapter extends RecyclerView.Adapter<NearPlaceAdapter.View
         return items.size();
     }
 
-    public void setItems(ArrayList<NearPlaceImage> items) {
+    public void setItems(ArrayList<Tour> items) {
         this.items = items;
     }
 

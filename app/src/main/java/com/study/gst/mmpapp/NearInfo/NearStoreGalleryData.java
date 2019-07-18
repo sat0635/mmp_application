@@ -8,6 +8,7 @@ public class NearStoreGalleryData {
 
     public ArrayList<NearStoreImage> getItems() {
 
+
         NearStoreImage place1 = new NearStoreImage("http://155.230.91.237:26002/Gallery/picture1.png",
                 "대구 중구","김광석 거리", "2km");
 

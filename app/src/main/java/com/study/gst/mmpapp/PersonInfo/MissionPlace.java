@@ -45,7 +45,6 @@ public class MissionPlace extends AppCompatActivity {
 
         listView = (ListView)this.findViewById(R.id.listView);
 
-        new JSONTask().execute("http://172.30.1.9:8080/get/tourlist");
     }
 
     private void updateList(ArrayList<Tour> tourList) {
@@ -72,17 +71,14 @@ public class MissionPlace extends AppCompatActivity {
             ImageView imageView = (ImageView)v.findViewById(R.id.imageView);
             Button button = (Button)v.findViewById(R.id.button);
             // 리스트뷰의 아이템에 이미지를 변경한다.
-            Glide.with(MissionPlace.this).load( items.get(position).getImageURL()).into(imageView);
 
             TextView textView = (TextView)v.findViewById(R.id.textView);
-            textView.setText(items.get(position).getName());
 
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(MissionPlace.this, MissionPlacePopup.class);
-                    intent.putExtra("INFO", items.get(position));
 
                     startActivity(intent);
                 }
@@ -90,39 +86,5 @@ public class MissionPlace extends AppCompatActivity {
             return v;
         }
     }
-
-
-
-
-    public class JSONTask extends AsyncTask<String, String, String> {
-        @Override
-        protected String doInBackground(String... urls) {
-            return HTTPCommunication.getHTTP(urls[0]);
-        }
-
-        //doInBackground메소드가 끝나면 여기로 와서 텍스트뷰의 값을 바꿔준다.
-        @Override
-        protected void onPostExecute(String result) {
-            super.onPostExecute(result);
-            Log.i("result", result);
-            ArrayList<Tour> tourList = new ArrayList<Tour>();
-            try {
-                JSONArray tourListJson = new JSONArray(result);
-
-                for(int i = 0; i < tourListJson.length(); i++) {
-                    tourList.add(new Tour(tourListJson.getJSONObject(i)));
-                }
-
-                updateList(tourList);
-            } catch (JSONException je) {
-                je.printStackTrace();
-            }
-
-
-
-        }
-
-    }
-
 
 }

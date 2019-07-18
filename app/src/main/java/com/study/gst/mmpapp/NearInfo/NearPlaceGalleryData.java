@@ -1,36 +1,33 @@
 package com.study.gst.mmpapp.NearInfo;
 
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+
+import com.study.gst.mmpapp.model.Tour;
+
 import java.util.ArrayList;
 
-public class NearPlaceGalleryData {
 
-    ArrayList<NearPlaceImage> items = new ArrayList<>();
+public class NearPlaceGalleryData extends AppCompatActivity {
+    private String URL="http://106.10.35.40:8000/api/nearplace/35.844847/128.466193/";
 
-    public ArrayList<NearPlaceImage> getItems() {
+    ArrayList<Tour> items = new ArrayList<Tour>();
 
-        NearPlaceImage place1 = new NearPlaceImage("http://155.230.91.237:26002/Gallery/picture1.png",
-                "대구 중구","김광석 거리", "2km");
 
-        NearPlaceImage place2 = new NearPlaceImage("http://155.230.91.237:26002/Gallery/picture2.png",
-                "대구 서구", "팔공산", "3km");
 
-        NearPlaceImage place3 = new NearPlaceImage("http://155.230.91.237:26002/Gallery/picture3.png",
-                "대구 북구", "근대화골목", "4km");
 
-        items.add(place1);
-        items.add(place2);
-        items.add(place3);
 
-        items.add(place1);
-        items.add(place2);
-        items.add(place3);
-        items.add(place1);
-        items.add(place2);
-        items.add(place3);
-        items.add(place1);
-        items.add(place2);
-        items.add(place3);
+    public ArrayList<Tour> getItems() {
 
+
+
+        Log.d("tag","after lopal execute");
         return items;
     }
+
 }
