@@ -1,17 +1,12 @@
 package com.study.gst.mmpapp.PersonInfo;
 
-import android.app.Activity;
 import android.app.ActivityGroup;
-import android.app.TabActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.study.gst.mmpapp.R;
-import com.study.gst.mmpapp.model.Tour;
+import com.study.gst.mmpapp.NearInfo.Tour;
 
 //팝업창으로 해당 미션장소 상세한 정보 띄우기
 public class MissionPlacePopup  extends ActivityGroup {

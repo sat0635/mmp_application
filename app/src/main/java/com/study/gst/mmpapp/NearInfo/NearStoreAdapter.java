@@ -2,6 +2,7 @@ package com.study.gst.mmpapp.NearInfo;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class NearStoreAdapter extends RecyclerView.Adapter<NearStoreAdapter.View
                 .apply(new RequestOptions().circleCrop())
                 .into(viewHolder.ivImage);
         viewHolder.tvBigPlaceName.setText(item.getBig_place());
+        Log.d("tag","lopalstore"+item.getBig_place());
         viewHolder.tvPlaceName.setText(item.getPlace());
         viewHolder.tvPlaceKm.setText(item.getKm());
 
@@ -48,7 +50,10 @@ public class NearStoreAdapter extends RecyclerView.Adapter<NearStoreAdapter.View
         return items.size();
     }
 
-    public void setItems(ArrayList<NearStoreImage> items) {
+    public void setItems(ArrayList<NearStoreImage> items)
+    {
+        Log.d("tag","lopalplace what the fuck ttibak"+items.get(0));
+
         this.items = items;
     }
 
@@ -59,7 +64,7 @@ public class NearStoreAdapter extends RecyclerView.Adapter<NearStoreAdapter.View
 
         ViewHolder(View itemView) {
             super(itemView);
-
+            Log.d("tag","lopalstore what the fuck52523523");
             ivImage = itemView.findViewById(R.id.near_place_list_place_image);
             tvBigPlaceName = itemView.findViewById(R.id.near_place_list_place_big_name);
             tvPlaceKm = itemView.findViewById(R.id.near_place_list_place_km);

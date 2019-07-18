@@ -3,10 +3,8 @@ package com.study.gst.mmpapp.PersonInfo;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,13 +15,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-import com.bumptech.glide.Glide;
-import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.R;
-import com.study.gst.mmpapp.model.Tour;
-
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.study.gst.mmpapp.NearInfo.Tour;
 
 import java.util.ArrayList;
 

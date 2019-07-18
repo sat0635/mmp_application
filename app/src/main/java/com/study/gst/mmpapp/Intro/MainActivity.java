@@ -1,14 +1,11 @@
 package com.study.gst.mmpapp.Intro;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.view.MenuItem;
@@ -21,22 +18,13 @@ import android.view.Menu;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.NearInfo.NearStoreActivity;
-import com.study.gst.mmpapp.NearInfo.NearStoreAdapter;
 import com.study.gst.mmpapp.PersonInfo.MissionPlace;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
 import com.study.gst.mmpapp.QRcodeActivity;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
-import com.study.gst.mmpapp.HTTP.HTTPCommunication;
-import com.study.gst.mmpapp.model.Tour;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -81,7 +69,7 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
 
         //아이템 로드
-        adapter.setItems(new GalleryData().getItems());
+        //adapter.setItems(new GalleryData().getItems());
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.mainactivity_bottomnavigationview);
 
