@@ -1,6 +1,7 @@
 package com.study.gst.mmpapp.NearInfo;
 
 import android.content.Intent;
+
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -15,18 +16,18 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.PersonInfo.MissionPlace;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.model.GpsTracker;
 import com.study.gst.mmpapp.model.NetworkService;
+import com.study.gst.mmpapp.model.Tour;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,11 +37,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class NearPlaceActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
-    private boolean flag=false;
+        implements NavigationView.OnNavigationItemSelectedListener {
+    private boolean flag = false;
     private NearPlaceAdapter adapter = new NearPlaceAdapter();
     private Retrofit retrofit;
     private ArrayList<Tour> items = new ArrayList<>();
+
+    private GpsTracker gpsTracker;
+
+
+    private double longitude;
+    private double latitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +60,7 @@ public class NearPlaceActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout_near_place);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
+
         //왼쪽의 메뉴탭 반응
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -62,7 +70,14 @@ public class NearPlaceActivity extends AppCompatActivity
 
 
 
-        new JSONTask().execute("http://106.10.35.40:8000/api/nearplace/35.844847/128.466193/");
+
+        gpsTracker = new GpsTracker(NearPlaceActivity.this);
+
+        latitude = gpsTracker.getLatitude();
+        longitude = gpsTracker.getLongitude();
+        Log.d("tag","lopal gpsx"+latitude);
+
+        new JSONTask().execute();
 
 
     }
@@ -72,7 +87,7 @@ public class NearPlaceActivity extends AppCompatActivity
         protected String doInBackground(String... urls) {
             init();
             NetworkService service = retrofit.create(NetworkService.class);
-            Call<List<Tour>> call = service.get_version();
+            Call<List<Tour>> call = service.get_version(latitude, longitude );
 
             call.enqueue(new Callback<List<Tour>>() {
 
@@ -81,11 +96,7 @@ public class NearPlaceActivity extends AppCompatActivity
                     List<Tour> tours = response.body();
                     for (Tour tour : tours) {
                         items.add(tour);
-                        Log.d("tag", "lopal" + tour.getIMAGENAME());
                     }
-                    Log.d("tag", "lopal check1");
-                    Log.d("tag", "lopal check2");
-
                     RecyclerView recyclerView = findViewById(R.id.recycler_view);
                     recyclerView.setLayoutManager(new LinearLayoutManager(NearPlaceActivity.this, LinearLayoutManager.VERTICAL,false));
                     recyclerView.setAdapter(adapter);
@@ -163,4 +174,6 @@ public class NearPlaceActivity extends AppCompatActivity
 
         return true;
     }
+
+
 }

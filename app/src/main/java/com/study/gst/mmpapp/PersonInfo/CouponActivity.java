@@ -15,7 +15,7 @@ import android.widget.ListView;
 import com.bumptech.glide.Glide;
 import com.study.gst.mmpapp.HTTP.HTTPCommunication;
 import com.study.gst.mmpapp.R;
-import com.study.gst.mmpapp.NearInfo.Tour;
+import com.study.gst.mmpapp.model.Tour;
 
 import org.json.JSONArray;
 import org.json.JSONException;

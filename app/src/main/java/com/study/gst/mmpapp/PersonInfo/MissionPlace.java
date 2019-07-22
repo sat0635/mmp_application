@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 
 import com.study.gst.mmpapp.R;
-import com.study.gst.mmpapp.NearInfo.Tour;
+import com.study.gst.mmpapp.model.Tour;
 
 import java.util.ArrayList;
 

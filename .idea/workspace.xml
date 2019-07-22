@@ -113,7 +113,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccd14d79-4c6c-48db-b93d-5e562d761fc2" name="Default Changelist" comment="update all">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/Tour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/GpsTracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -122,24 +122,47 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/GalleryData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreGalleryData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreImage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/CouponActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/CouponActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MissionPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MissionPlace.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MissionPlacePopup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MissionPlacePopup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Store.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="38">
+                    <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -150,115 +173,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/GpsTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="82" column="40" lean-forward="true" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+            <state relative-caret-position="303">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2010#2041#0" expanded="true" />
-                <element signature="e#2043#2075#0" expanded="true" />
+                <element signature="e#4212#4213#0" expanded="true" />
+                <element signature="e#4239#4240#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreImage.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreGalleryData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/UserModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="323">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceAdapter.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="378">
+              <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1949#1980#0" expanded="true" />
+                <element signature="e#1982#2014#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/CouponActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="328">
+              <caret line="46" column="37" selection-start-line="38" selection-start-column="7" selection-end-line="46" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1732#1733#0" expanded="true" />
-                <element signature="e#1789#1790#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#11710#11894#0" expanded="true" />
+                <element signature="e#11893#11894#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/Tour.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-              <folding>
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#811#812#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#959#960#0" expanded="true" />
-                <element signature="e#993#994#0" expanded="true" />
-                <element signature="e#1024#1025#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1092#1093#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1182#1183#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1244#1245#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="589">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="55" column="51" selection-start-line="3" selection-end-line="55" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -270,8 +278,8 @@
       <list>
         <option value="resourceFile" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -293,6 +301,9 @@
       <find>lopal</find>
       <find>itemView</find>
       <find>Near</find>
+      <find>fai</find>
+      <find>showDia</find>
+      <find>checkL</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -306,8 +317,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/TypingMissionActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_typing_mission.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Missions/FindImageActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/MissionMainActivity.java" />
@@ -344,27 +353,29 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/APIInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/ApplicationsController.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/GalleryData.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/Tour.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivityTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Store.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/GpsTracker.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3" />
-    <option name="y" value="10" />
-    <option name="width" value="1174" />
-    <option name="height" value="1020" />
+    <option name="x" value="9" />
+    <option name="y" value="4" />
+    <option name="width" value="1035" />
+    <option name="height" value="889" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -372,7 +383,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -438,8 +450,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -564,11 +575,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="10" width="1174" height="1020" extended-state="0" />
+    <frame x="9" y="4" width="1035" height="889" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2648115" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3025641" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -576,18 +587,18 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Find" sideWeight="0.49960598" weight="0.3295711" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32990867" />
-      <window_info active="true" anchor="bottom" id="Logcat" order="1" sideWeight="0.8527828" visible="true" weight="0.4085779" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.63897437" visible="true" weight="0.19337748" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4994965" weight="0.3295711" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.14721723" side_tool="true" visible="true" weight="0.4085779" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.36102563" side_tool="true" visible="true" weight="0.19337748" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.85263985" weight="0.42212188" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.8490153" weight="0.22886133" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="GitHub Pull Requests" order="9" sideWeight="0.49952334" visible="true" weight="0.32914287" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49952334" weight="0.32914287" />
+      <window_info anchor="bottom" id="Find" order="11" sideWeight="0.49960598" weight="0.3295711" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -601,14 +612,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="update all" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_coupon.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/Ranking.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-103">
@@ -648,36 +651,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_page.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="170" column="29" selection-start-line="170" selection-start-column="29" selection-end-line="170" selection-end-column="36" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_navigation_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MyPage.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,16 +693,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/HTTP/RequestHttpURLConnection.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/CouponActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -760,12 +753,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceImage.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/HTTP/GetData.java" />
@@ -806,13 +799,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/GalleryData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/GalleryData.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/MissionPlacePopup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -823,91 +810,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_near_store.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
           <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/near_place_list.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/Tour.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#959#960#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivityTest.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -915,65 +834,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreGalleryData.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <element signature="e#1466#1497#0" expanded="true" />
-            <element signature="e#1499#1531#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+        <state relative-caret-position="152">
+          <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Store.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivityTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceGalleryData.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_near_place.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="589">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/Tour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="55" column="51" selection-start-line="3" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/GpsTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#4212#4213#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreGalleryData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceAdapter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/model/NetworkService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="323">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreAdapter.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/Intro/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#11710#11894#0" expanded="true" />
+            <element signature="e#11893#11894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearPlaceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="82" column="40" lean-forward="true" selection-start-line="82" selection-start-column="40" selection-end-line="82" selection-end-column="40" />
+        <state relative-caret-position="38">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2010#2041#0" expanded="true" />
-            <element signature="e#2043#2075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/NearInfo/NearStoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1949#1980#0" expanded="true" />
+            <element signature="e#1982#2014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/study/gst/mmpapp/PersonInfo/CouponActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="46" column="37" selection-start-line="38" selection-start-column="7" selection-end-line="46" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

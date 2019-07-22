@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.model.Tour;
 
 import java.util.ArrayList;
 
@@ -34,15 +35,13 @@ public class NearPlaceAdapter extends RecyclerView.Adapter<NearPlaceAdapter.View
     public void onBindViewHolder(@NonNull NearPlaceAdapter.ViewHolder viewHolder, int position) {
 
         Tour item = items.get(position);
-        Log.d("tag","lopalplace what the fuck!!!!");
         Glide.with(viewHolder.itemView.getContext())
                 .load(item.getIMAGE())
                 .apply(new RequestOptions().circleCrop())
                 .into(viewHolder.ivImage);
         viewHolder.tvBigPlaceName.setText(item.getIMAGENAME());
-        Log.d("tag","lopalplace"+item.getIMAGENAME());
         viewHolder.tvPlaceName.setText(item.getNAME());
-        viewHolder.tvPlaceKm.setText("ttt");
+        viewHolder.tvPlaceKm.setText(item.getDISTANCE());
 
 
 
@@ -66,7 +65,7 @@ public class NearPlaceAdapter extends RecyclerView.Adapter<NearPlaceAdapter.View
         ViewHolder(View itemView) {
             super(itemView);
 
-            Log.d("tag","lopalplace what the fuck43243242");
+            Log.d("tag","lopal : NearPlaceApapter viewHolder");
             ivImage = itemView.findViewById(R.id.near_place_list_place_image);
             tvBigPlaceName = itemView.findViewById(R.id.near_place_list_place_big_name);
             tvPlaceKm = itemView.findViewById(R.id.near_place_list_place_km);

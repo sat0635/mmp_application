@@ -6,7 +6,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.study.gst.mmpapp.R;
-import com.study.gst.mmpapp.NearInfo.Tour;
+import com.study.gst.mmpapp.model.Tour;
 
 //팝업창으로 해당 미션장소 상세한 정보 띄우기
 public class MissionPlacePopup  extends ActivityGroup {
