@@ -34,12 +34,12 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.ViewHold
         Picture item = items.get(position);
 
         Glide.with(viewHolder.itemView.getContext())
-                .load(item.getUrl())
+                .load(item.getIMAGE())
                 .into(viewHolder.ivPicture);
 
-        viewHolder.tvTitle.setText(item.getTitle());
-        viewHolder.tvContent.setText(item.getContent());
-        viewHolder.tvGenre.setText(item.getPlace());
+        viewHolder.tvTitle.setText(item.getTITLE());
+        viewHolder.tvContent.setText(item.getCONTENT());
+        viewHolder.tvGenre.setText("");
 
     }
 

@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.study.gst.mmpapp.PersonInfo.MissionPlace;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
 import com.study.gst.mmpapp.R;
@@ -33,8 +32,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class NearStoreActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+public class NearStoreActivity extends AppCompatActivity{
 
     private NearStoreAdapter adapter = new NearStoreAdapter();
     private Retrofit retrofit;
@@ -50,16 +48,6 @@ public class NearStoreActivity extends AppCompatActivity
         setContentView(R.layout.activity_near_store);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout_near_store);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-
-        //왼쪽의 메뉴탭 반응
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
 
 
 
@@ -129,43 +117,4 @@ public class NearStoreActivity extends AppCompatActivity
     }
 
 
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }else if (id == R.id.nav_myPage) {
-
-
-            Intent intent_act = new Intent(getApplicationContext(), MyPage.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_missionPlace) {
-
-            Intent intent_act = new Intent(getApplicationContext(), MissionPlace.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_ranking) {
-
-            Intent intent_act = new Intent(getApplicationContext(), Ranking.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-
-        return true;
-    }
 }

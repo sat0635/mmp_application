@@ -30,7 +30,6 @@
         <activity android:name=".Missions.MissionMainActivity" />
         <activity android:name=".QRcodeActivity" />
         <activity android:name=".NearInfo.NearPlaceActivity" />
-        <activity android:name=".Missions.WallMissionActivity" />
         <activity
             android:name=".Intro.SplashActivity"
             android:label="@string/app_name"
@@ -43,11 +42,7 @@
         </activity>
         <activity android:name=".Intro.MainActivity" />
         <activity android:name=".PersonInfo.MyPage" />
-        <activity android:name=".PersonInfo.MissionPlace" />
         <activity android:name=".PersonInfo.Ranking" />
-        <activity
-            android:name=".PersonInfo.MissionPlacePopup"
-            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".Intro.SignupActivity" />
         <activity android:name=".Intro.LoginActivity" />
     </application>

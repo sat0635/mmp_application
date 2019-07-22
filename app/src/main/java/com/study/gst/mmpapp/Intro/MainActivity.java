@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -26,24 +27,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.study.gst.mmpapp.NearInfo.NearStoreActivity;
-import com.study.gst.mmpapp.PersonInfo.MissionPlace;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
 import com.study.gst.mmpapp.QRcodeActivity;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
+import com.study.gst.mmpapp.model.NetworkService;
+import com.study.gst.mmpapp.model.Picture;
+import com.study.gst.mmpapp.model.Store;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Retrofit retrofit;
+    private ArrayList<Picture> items = new ArrayList<>();
     private PictureAdapter adapter = new PictureAdapter();
     private Button mission_button;
     private Button place_button;
@@ -87,17 +98,10 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
-        //recycleView 초기화, 메인페이지에서 인스타느낌의 사진 스크롤뷰를 나타내기 위함
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
-
+        new JSONTask().execute();
         //아이템 로드
-        //adapter.setItems(new GalleryData().getItems());
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.mainactivity_bottomnavigationview);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -118,6 +122,61 @@ public class MainActivity extends AppCompatActivity
         });
 
     }
+
+    public class JSONTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+            init();
+            NetworkService service = retrofit.create(NetworkService.class);
+            Call<List<Picture>> call = service.get_picture();
+
+            call.enqueue(new Callback<List<Picture>>() {
+
+                @Override
+                public void onResponse(Call<List<Picture>> call, Response<List<Picture>> response) {
+                    List<Picture> pictures = response.body();
+                    for (Picture picture : pictures) {
+                        items.add(picture);
+                    }
+                    Log.d("tag", "lopal: onResponse");
+
+                    RecyclerView recyclerView = findViewById(R.id.recycler_view);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL,false));
+                    recyclerView.setAdapter(adapter);
+
+                    adapter.setItems(items);
+                }
+
+                @Override
+                public void onFailure(Call<List<Picture>> call, Throwable t) {
+                    Log.d("tag", "lopal fail");
+                }
+            });
+            return "done";
+        }
+
+        //doInBackground메소드가 끝나면 여기로 와서 텍스트뷰의 값을 바꿔준다.
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Log.i("result", "lopal onpostExecute");
+
+
+
+        }
+
+    }
+
+
+
+    public void init() {
+        // GSON 컨버터를 사용하는 REST 어댑터 생성
+        retrofit = new Retrofit.Builder()
+                .baseUrl("http://106.10.35.40:8000/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -169,8 +228,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_missionPlace) {
 
-            Intent intent_act = new Intent(getApplicationContext(), MissionPlace.class);
-            startActivity(intent_act);
+          //  Intent intent_act = new Intent(getApplicationContext(), MissionPlace.class);
+            //startActivity(intent_act);
             return true;
 
         } else if (id == R.id.nav_ranking) {

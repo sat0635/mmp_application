@@ -5,37 +5,26 @@ import org.json.JSONObject;
 import org.json.JSONException;
 //메인페이지 아이템 객체
 public class Picture {
+    private String TITLE;
+    private String CONTENT;
+    private String IMAGE;
 
-    private String url;
-    private String place;
-    private String title;
-    private String content;
+    public Picture(String title, String content, String image) {
 
-    public Picture(String url, String place, String title, String content) {
-
-        this.url = url;
-        this.place = place;
-        this.title = title;
-        this.content = content;
-
+        this.TITLE = title;
+        this.CONTENT = content;
+        this.IMAGE = image;
     }
 
-    public Picture(JSONObject o) {
+    public String getTITLE() {
+        return TITLE;
     }
 
-    public String getUrl() {
-        return url;
+    public String getCONTENT() {
+        return CONTENT;
     }
 
-    public String getPlace() {
-        return place;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getContent() {
-        return content;
+    public String getIMAGE() {
+        return IMAGE;
     }
 }

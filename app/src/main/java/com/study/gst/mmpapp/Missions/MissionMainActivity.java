@@ -34,8 +34,8 @@ public class MissionMainActivity extends AppCompatActivity {
                         startActivityForResult(intent1, 1);
                         break;
                     case 2: // 벽화 미션
-                        Intent intent2 = new Intent(MissionMainActivity.this,  WallMissionActivity.class);
-                        startActivityForResult(intent2, 1);
+                      //  Intent intent2 = new Intent(MissionMainActivity.this,  WallMissionActivity.class);
+                       // startActivityForResult(intent2, 1);
                         break;
                     case 3: // 인증샷 미션
                         Intent intent3 = new Intent(MissionMainActivity.this,  PhotoMissionActivity.class);

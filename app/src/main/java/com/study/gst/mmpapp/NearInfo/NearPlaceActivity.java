@@ -16,7 +16,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.study.gst.mmpapp.PersonInfo.MissionPlace;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
 import com.study.gst.mmpapp.R;
@@ -24,10 +23,8 @@ import com.study.gst.mmpapp.model.GpsTracker;
 import com.study.gst.mmpapp.model.NetworkService;
 import com.study.gst.mmpapp.model.Tour;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,8 +33,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class NearPlaceActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class NearPlaceActivity extends AppCompatActivity {
     private boolean flag = false;
     private NearPlaceAdapter adapter = new NearPlaceAdapter();
     private Retrofit retrofit;
@@ -54,19 +50,8 @@ public class NearPlaceActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_near_place);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout_near_place);
-        NavigationView navigationView = findViewById(R.id.nav_view);
 
 
-        //왼쪽의 메뉴탭 반응
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
 
 
 
@@ -134,46 +119,6 @@ public class NearPlaceActivity extends AppCompatActivity
                 .build();
     }
 
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.nav_home) {
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
-        }else if (id == R.id.nav_myPage) {
-
-
-            Intent intent_act = new Intent(getApplicationContext(), MyPage.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_missionPlace) {
-
-            Intent intent_act = new Intent(getApplicationContext(), MissionPlace.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_ranking) {
-
-            Intent intent_act = new Intent(getApplicationContext(), Ranking.class);
-            startActivity(intent_act);
-            return true;
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
-        }
-
-
-        return true;
-    }
 
 
 }

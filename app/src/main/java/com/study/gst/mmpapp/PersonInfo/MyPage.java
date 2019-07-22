@@ -41,8 +41,8 @@ public class MyPage extends AppCompatActivity {
         history_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyPage.this, MissionPlace.class);
-                startActivity(intent);
+               // Intent intent = new Intent(MyPage.this, MissionPlace.class);
+                //startActivity(intent);
             }
         });
 

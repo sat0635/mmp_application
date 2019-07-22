@@ -18,4 +18,12 @@ public interface NetworkService{
             @Path("gpsx") Double gpsx,
             @Path("gpsy") Double gpsy
     );
+
+    @GET("api/coupon/{userid}")
+    Call<List<Coupon>> get_version3(
+            @Path("userid") String userid
+    );
+    @GET("api/picture/")
+    Call<List<Picture>> get_picture(
+    );
 }
