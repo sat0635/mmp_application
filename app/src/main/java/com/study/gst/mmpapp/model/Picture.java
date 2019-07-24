@@ -8,6 +8,8 @@ public class Picture {
     private String TITLE;
     private String CONTENT;
     private String IMAGE;
+    private int like;
+
 
     public Picture(String title, String content, String image) {
 

@@ -1,31 +1,16 @@
 package com.study.gst.mmpapp.PersonInfo;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 
-import com.bumptech.glide.Glide;
-import com.study.gst.mmpapp.HTTP.HTTPCommunication;
-import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
-import com.study.gst.mmpapp.NearInfo.NearPlaceAdapter;
-import com.study.gst.mmpapp.NearInfo.NearStoreActivity;
+import com.study.gst.mmpapp.Adapter.CouponAdapter;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.model.Coupon;
 import com.study.gst.mmpapp.model.NetworkService;
-import com.study.gst.mmpapp.model.Tour;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;

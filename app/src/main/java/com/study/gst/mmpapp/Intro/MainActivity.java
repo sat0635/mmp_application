@@ -13,6 +13,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,15 +30,16 @@ import android.view.Menu;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.study.gst.mmpapp.Adapter.EventAdapter;
 import com.study.gst.mmpapp.NearInfo.NearStoreActivity;
 import com.study.gst.mmpapp.PersonInfo.MyPage;
 import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
 import com.study.gst.mmpapp.QRcodeActivity;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
+import com.study.gst.mmpapp.SNSActivity;
+import com.study.gst.mmpapp.model.Event;
 import com.study.gst.mmpapp.model.NetworkService;
-import com.study.gst.mmpapp.model.Picture;
-import com.study.gst.mmpapp.model.Store;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -54,8 +56,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Retrofit retrofit;
-    private ArrayList<Picture> items = new ArrayList<>();
-    private PictureAdapter adapter = new PictureAdapter();
+    private ArrayList<Event> items = new ArrayList<>();
+    private EventAdapter adapter = new EventAdapter();
     private Button mission_button;
     private Button place_button;
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
@@ -72,11 +74,55 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        if (!checkLocationServicesStatus()) {
+        //왼쪽의 메뉴탭 반응
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.nav_home) {
+                    DrawerLayout drawer = findViewById(R.id.drawer_layout);
+                    drawer.closeDrawer(GravityCompat.START);
+                    return true;
+                    //인증샷 갤러리
+                }else if (id == R.id.nav_myPage) {
+                    Intent intent_act = new Intent(getApplicationContext(), SNSActivity.class);
+                    startActivity(intent_act);
+                    return true;
 
+                } else if (id == R.id.nav_missionPlace) {
+
+                    Intent intent_act = new Intent(getApplicationContext(), NearPlaceActivity.class);
+                    startActivity(intent_act);
+                    return true;
+
+                } else if (id == R.id.nav_ranking) {
+
+                    Intent intent_act = new Intent(getApplicationContext(), Ranking.class);
+                    startActivity(intent_act);
+                    return true;
+
+                } else if (id == R.id.nav_tools) {
+
+                } else if (id == R.id.nav_share) {
+
+                } else if (id == R.id.nav_send) {
+
+                }
+
+
+                return true;
+            }
+        }
+
+        );
+
+        if (!checkLocationServicesStatus()) {
             showDialogForLocationServiceSetting();
         }else {
-
             checkRunTimePermission();
         }
 
@@ -128,15 +174,16 @@ public class MainActivity extends AppCompatActivity
         protected String doInBackground(String... urls) {
             init();
             NetworkService service = retrofit.create(NetworkService.class);
-            Call<List<Picture>> call = service.get_picture();
+            Call<List<Event>> call = service.get_event();
 
-            call.enqueue(new Callback<List<Picture>>() {
+            call.enqueue(new Callback<List<Event>>() {
 
                 @Override
-                public void onResponse(Call<List<Picture>> call, Response<List<Picture>> response) {
-                    List<Picture> pictures = response.body();
-                    for (Picture picture : pictures) {
-                        items.add(picture);
+                public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
+                    List<Event> events = response.body();
+                    for (Event event : events) {
+                        items.add(event);
+
                     }
                     Log.d("tag", "lopal: onResponse");
 
@@ -148,7 +195,7 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 @Override
-                public void onFailure(Call<List<Picture>> call, Throwable t) {
+                public void onFailure(Call<List<Event>> call, Throwable t) {
                     Log.d("tag", "lopal fail");
                 }
             });

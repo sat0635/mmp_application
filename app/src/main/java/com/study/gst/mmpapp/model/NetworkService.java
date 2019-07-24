@@ -19,11 +19,20 @@ public interface NetworkService{
             @Path("gpsy") Double gpsy
     );
 
-    @GET("api/coupon/{userid}")
+    @GET("api/coupon/{userid}/")
     Call<List<Coupon>> get_version3(
             @Path("userid") String userid
     );
     @GET("api/picture/")
     Call<List<Picture>> get_picture(
     );
+    @GET("api/event/")
+    Call<List<Event>> get_event(
+    );
+
+    @GET("api/insertuser/{userid}/")
+    Call<Event> insert_user(
+            @Path("userid") String userid
+    );
+
 }
