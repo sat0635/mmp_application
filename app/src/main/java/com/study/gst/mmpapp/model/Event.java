@@ -1,5 +1,6 @@
 package com.study.gst.mmpapp.model;
 
+//메인페이지의 이벤트
 public class Event {
     private String TITLE;
     private String CONTENT;

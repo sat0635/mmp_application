@@ -14,7 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 
-
+//현재 위치정보를 가져오는 객체, NeaInfo 패키지에서 사용
 public class GpsTracker extends Service implements LocationListener {
 
     private final Context mContext;

@@ -1,9 +1,6 @@
 package com.study.gst.mmpapp.model;
 
-
-import org.json.JSONObject;
-import org.json.JSONException;
-//메인페이지 아이템 객체
+//인증샷 갤러리의 인증샷
 public class Picture {
     private String TITLE;
     private String CONTENT;

@@ -29,7 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.study.gst.mmpapp.R;
-
+//로그인페이지
 public class LoginActivity extends AppCompatActivity {
 
     private GoogleApiClient mGoogleApiClient;

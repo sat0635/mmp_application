@@ -37,9 +37,10 @@ import com.study.gst.mmpapp.NearInfo.NearPlaceActivity;
 import com.study.gst.mmpapp.QRcodeActivity;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.PersonInfo.Ranking;
-import com.study.gst.mmpapp.SNSActivity;
+import com.study.gst.mmpapp.SNS.SNSActivity;
+import com.study.gst.mmpapp.config;
 import com.study.gst.mmpapp.model.Event;
-import com.study.gst.mmpapp.model.NetworkService;
+import com.study.gst.mmpapp.RESTAPI.NetworkService;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,6 +53,9 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+
+//홈 메인페이지
+//GPS 설정 여부 체크
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -79,6 +83,7 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+        //좌측 상단 탭 메뉴
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -128,7 +133,7 @@ public class MainActivity extends AppCompatActivity
 
         mission_button = (Button)findViewById(R.id.mission_button);
         place_button = (Button)findViewById(R.id.place_button);
-
+        //명소 클릭 시
         mission_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,7 +141,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
+        //미션 클릭 시
         place_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -144,9 +149,11 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-        new JSONTask().execute();
-        //아이템 로드
 
+        //이벤트 불러오기
+        new JSONTask().execute();
+
+        //하단의 메뉴판 가져오기
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.mainactivity_bottomnavigationview);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -219,7 +226,7 @@ public class MainActivity extends AppCompatActivity
     public void init() {
         // GSON 컨버터를 사용하는 REST 어댑터 생성
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://106.10.35.40:8000/")
+                .baseUrl(config.base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
@@ -256,6 +263,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

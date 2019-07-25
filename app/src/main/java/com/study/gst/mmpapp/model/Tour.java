@@ -1,5 +1,6 @@
 package com.study.gst.mmpapp.model;
 
+//관광지
 public class Tour {
 
     private int id;

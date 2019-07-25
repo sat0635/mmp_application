@@ -1,5 +1,7 @@
 package com.study.gst.mmpapp.model;
 
+
+//가맹점
 public class Store {
 
     private int id;

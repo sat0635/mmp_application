@@ -10,7 +10,7 @@ import android.util.Log;
 import com.study.gst.mmpapp.Adapter.CouponAdapter;
 import com.study.gst.mmpapp.R;
 import com.study.gst.mmpapp.model.Coupon;
-import com.study.gst.mmpapp.model.NetworkService;
+import com.study.gst.mmpapp.RESTAPI.NetworkService;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -18,7 +18,7 @@ import com.study.gst.mmpapp.BuildConfig;
 import com.study.gst.mmpapp.Intro.LoginActivity;
 import com.study.gst.mmpapp.R;
 
-
+//스플래시 화면
 public class SplashActivity extends AppCompatActivity {
 
     private LinearLayout linearLayout;

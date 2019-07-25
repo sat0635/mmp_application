@@ -10,8 +10,9 @@ import android.util.Log;
 
 import com.study.gst.mmpapp.Adapter.NearStoreAdapter;
 import com.study.gst.mmpapp.R;
+import com.study.gst.mmpapp.config;
 import com.study.gst.mmpapp.model.GpsTracker;
-import com.study.gst.mmpapp.model.NetworkService;
+import com.study.gst.mmpapp.RESTAPI.NetworkService;
 import com.study.gst.mmpapp.model.Store;
 
 import java.util.ArrayList;
@@ -103,7 +104,7 @@ public class NearStoreActivity extends AppCompatActivity{
     public void init() {
         // GSON 컨버터를 사용하는 REST 어댑터 생성
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://106.10.35.40:8000/")
+                .baseUrl(config.base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
