@@ -1,7 +1,9 @@
 package com.study.gst.mmpapp.RESTAPI;
 
+import com.study.gst.mmpapp.model.Comment;
 import com.study.gst.mmpapp.model.Coupon;
 import com.study.gst.mmpapp.model.Event;
+import com.study.gst.mmpapp.model.Heart;
 import com.study.gst.mmpapp.model.Picture;
 import com.study.gst.mmpapp.model.Store;
 import com.study.gst.mmpapp.model.Tour;
@@ -44,5 +46,16 @@ public interface NetworkService{
     Call<Event> insert_user(
             @Path("userid") String userid
     );
-
+    @GET("api/comment/{pictureid}/")
+    Call<List<Comment>> get_comment(
+            @Path("pictureid") int pictureid
+    );
+    @GET("api/heart/{pictureid}/")
+    Call<Heart> send_heart(
+            @Path("pictureid") int pictureid
+    );
+    @GET("api/getheart/{pictureid}/")
+    Call<Heart> get_heart(
+            @Path("pictureid") int pictureid
+    );
 }

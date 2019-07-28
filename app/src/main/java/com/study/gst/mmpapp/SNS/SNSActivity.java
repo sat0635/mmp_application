@@ -116,6 +116,8 @@ public class SNSActivity extends AppCompatActivity  implements NavigationView.On
                     recyclerView.setAdapter(adapter);
 
                     adapter.setItems(items);
+
+
                 }
 
                 @Override
