@@ -12,7 +12,7 @@
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401384-bd600c00-de02-11e9-97c3-6a517423cd62.jpg">
 
 </br>
-<h3>개인 </h3>
+<h3>개인 정보</h3>
 <hr/>
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401385-bf29cf80-de02-11e9-95f2-29b226b2ff66.jpg">
 
