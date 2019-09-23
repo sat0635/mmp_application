@@ -11,6 +11,11 @@
 <hr/>
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401384-bd600c00-de02-11e9-97c3-6a517423cd62.jpg">
 
+</br>
+<h3>개인 </h3>
+<hr/>
+<img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401385-bf29cf80-de02-11e9-95f2-29b226b2ff66.jpg">
+
 
 </br>
 <h3>위치기반 관광지 거리순</h3>
@@ -24,9 +29,8 @@
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401388-c224c000-de02-11e9-9e1e-d235f349a35a.jpg">
 
 
-
 </br>
-<h3></h3>
+<h3>미션 시작</h3>
 <hr/>
 <img width="586" alt="concept2" src="https://user-images.githubusercontent.com/29095448/65401391-c2bd5680-de02-11e9-840c-a1c9c2de6891.jpg">
 
